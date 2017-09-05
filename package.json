@@ -1,0 +1,51 @@
+{
+	"name": "vue-stack",
+	"version": "1.0.11",
+	"description": "Nuxt, Vue.js, Vuetify, Express, NanoSQL and Node.js stack",
+	"author": "Samuel Novaes <samuel.novaes.96@gmail.com>",
+	"scripts": {
+		"dev": "node server.js",
+		"build": "nuxt build",
+		"start": "cross-env NODE_ENV=production node server.js"
+	},
+	"dependencies": {
+		"axios": "^0.16.2",
+		"body-parser": "^1.17.2",
+		"chokidar": "^1.7.0",
+		"connect-multiparty": "^2.0.0",
+		"cross-env": "^3.0.0",
+		"express": "^4.15.4",
+		"express-session": "^1.15.5",
+		"level": "^1.7.0",
+		"level-session-store": "^2.0.2",
+		"nano-sql": "^0.9.1",
+		"nuxt": "^1.0.0-rc6",
+		"vuetify": "*"
+	},
+	"devDependencies": {
+		"stylus": "^0.54.5",
+		"stylus-loader": "^3.0.1"
+	},
+	"keywords": [
+		"nuxt",
+		"vue.js",
+		"vuetify",
+		"express",
+		"nano-sql",
+		"nanosql",
+		"database",
+		"nodejs",
+		"node",
+		"server",
+		"stack",
+		"mean"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/samuelnovaes/vue-stack.git"
+	},
+	"bugs": {
+		"url": "https://github.com/samuelnovaes/vue-stack/issues"
+	},
+	"homepage": "https://github.com/samuelnovaes/vue-stack#readme"
+}
