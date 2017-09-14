@@ -1,5 +1,5 @@
 # vue-stack
-Nuxt, Vue.js, Vuetify, Express, NanoSQL and Node.js stack
+Nuxt, Vue.js, Express, NanoSQL and Node.js stack
 
 ## Installation
 
@@ -111,7 +111,6 @@ module.exports = (app) => {
 - [ExpressJS](http://expressjs.com/en/guide/routing.html)
 - [Nuxt.js](https://nuxtjs.org/guide/)
 - [Vue.js](http://vuejs.org/guide/)
-- [Vuetify](https://vuetifyjs.com/vuetify/quick-start)
 - [NanoSQL](https://github.com/ClickSimply/Nano-SQL)
 - [Node.js](https://nodejs.org/dist/latest-v8.x/docs/api)
 - [Axios](https://github.com/mzabriskie/axios)

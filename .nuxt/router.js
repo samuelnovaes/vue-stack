@@ -4,7 +4,6 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const _2a07240c = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
-const _c4765ffc = () => import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */).then(m => m.default || m)
 
 
 
@@ -44,11 +43,6 @@ export function createRouter () {
 			path: "/",
 			component: _2a07240c,
 			name: "index"
-		},
-		{
-			path: "/inspire",
-			component: _c4765ffc,
-			name: "inspire"
 		}
     ],
     fallback: false

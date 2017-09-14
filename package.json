@@ -1,7 +1,7 @@
 {
 	"name": "vue-stack",
-	"version": "1.0.11",
-	"description": "Nuxt, Vue.js, Vuetify, Express, NanoSQL and Node.js stack",
+	"version": "1.0.12",
+	"description": "Nuxt, Vue.js, Express, NanoSQL and Node.js stack",
 	"author": "Samuel Novaes <samuel.novaes.96@gmail.com>",
 	"scripts": {
 		"dev": "node server.js",
@@ -19,17 +19,11 @@
 		"level": "^1.7.0",
 		"level-session-store": "^2.0.2",
 		"nano-sql": "^0.9.1",
-		"nuxt": "^1.0.0-rc6",
-		"vuetify": "*"
-	},
-	"devDependencies": {
-		"stylus": "^0.54.5",
-		"stylus-loader": "^3.0.1"
+		"nuxt": "^1.0.0-rc6"
 	},
 	"keywords": [
 		"nuxt",
 		"vue.js",
-		"vuetify",
 		"express",
 		"nano-sql",
 		"nanosql",

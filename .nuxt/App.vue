@@ -9,8 +9,6 @@
 import Vue from 'vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 
-import '../assets/style/app.styl'
-
 
 let layouts = {
 
@@ -21,7 +19,7 @@ let layouts = {
 let resolvedLayouts = {}
 
 export default {
-  head: {"title":"Starter Template","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"icon","type":"image/x-icon","href":"img/favicon.ico"},{"rel":"stylesheet","href":"fonts/material-icons.css"}],"style":[],"script":[]},
+  head: {"title":"Vue Stack","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[],"style":[],"script":[]},
   data: () => ({
     layout: null,
     layoutName: ''
