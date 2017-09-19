@@ -1,5 +1,5 @@
 # vue-stack
-Nuxt, Vue.js, Express, NanoSQL and Node.js stack
+Nuxt, Vue.js, Express, NanoSQL, Node.js
 
 ## Installation
 
@@ -18,7 +18,7 @@ Nuxt, Vue.js, Express, NanoSQL and Node.js stack
 
 ## HTTP request example
 
-### You have to use `this.$axios` to make http requuest
+### You have to use `this.$axios` or import the `axios` module to make http request
 
 pages/index.vue
 
@@ -34,6 +34,29 @@ pages/index.vue
 		methods: {
 			sendMsg(){
 				this.$axios.post('/msg', {msg: 'Hello Server!'}).then((res)=>{
+					alert(res.data)
+				})
+			}
+		}
+	}
+</script>
+```
+
+Or
+
+```html
+<template>
+	<div id="page">
+		<button @click="sendMsg">Send message to server</button>
+	</div>
+</template>
+
+<script>
+	import axios from 'axios'
+	export default {
+		methods: {
+			sendMsg(){
+				axios.post('/msg', {msg: 'Hello Server!'}).then((res)=>{
 					alert(res.data)
 				})
 			}

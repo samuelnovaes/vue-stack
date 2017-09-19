@@ -11,6 +11,7 @@ module.exports = {
 	],
 	loading: { color: '#FF0000' },
 	build: {
-		extractCSS: true
+		extractCSS: true,
+		vendor: ['axios']
 	}
 }
