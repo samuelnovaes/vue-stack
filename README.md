@@ -107,7 +107,7 @@ module.exports = (app) => {
 	//List people
 	app.get('/list', (req, res)=>{
 		nSQL('people').query('select').exec().then((rows)=>{
-			res.send(JSON.stringify(rows))
+			res.json(rows)
 		})
 	})
 

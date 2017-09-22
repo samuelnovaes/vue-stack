@@ -33,16 +33,17 @@ app.use((req, res, next)=>{
 })
 app.use(nuxt.render)
 
-if (config.dev) {
-	watcher.on('ready', function() {
-		watcher.on('all', function() {
-			Object.keys(require.cache).forEach(function(id) {
-				if (new RegExp(path.join(__dirname, 'server')).test(id)){
-					delete require.cache[id]
-				}
-			})
+watcher.on('ready', function() {
+	watcher.on('all', function() {
+		Object.keys(require.cache).forEach(function(id) {
+			if (new RegExp(path.join(__dirname, 'server')).test(id)){
+				delete require.cache[id]
+			}
 		})
 	})
+})
+
+if (config.dev) {
 	new Builder(nuxt).build().then(() => {
 		serve()
 	}).catch((error) => {
