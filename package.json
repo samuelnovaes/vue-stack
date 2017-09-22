@@ -1,6 +1,6 @@
 {
 	"name": "vue-stack",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"description": "Nuxt, Vue.js, Express, NanoSQL, Node.js",
 	"author": "Samuel Novaes <samuel.novaes.96@gmail.com>",
 	"scripts": {

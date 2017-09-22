@@ -26,17 +26,17 @@ app.use(expressSession({
 	resave: false,
 	saveUninitialized: true
 }))
-app.use((req, res, next)=>{
+app.use((req, res, next) => {
 	let router = express.Router()
 	require('./server/index.js')(router)
 	router(req, res, next)
 })
 app.use(nuxt.render)
 
-watcher.on('ready', function() {
-	watcher.on('all', function() {
-		Object.keys(require.cache).forEach(function(id) {
-			if (new RegExp(path.join(__dirname, 'server')).test(id)){
+watcher.on('ready', () => {
+	watcher.on('all', () => {
+		Object.keys(require.cache).forEach((id) => {
+			if (new RegExp(path.join(__dirname, 'server')).test(id)) {
 				delete require.cache[id]
 			}
 		})

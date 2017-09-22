@@ -1,6 +1,8 @@
 # vue-stack
 Nuxt, Vue.js, Express, NanoSQL, Node.js
 
+[![NPM](https://nodei.co/npm/vue-stack.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-stack/)
+
 ## Installation
 
 - Download vue-stack [here](https://github.com/samuelnovaes/vue-stack/releases)

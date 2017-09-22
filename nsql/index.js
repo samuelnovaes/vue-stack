@@ -1,3 +1,3 @@
-module.exports = (nSQL)=>{
+module.exports = (nSQL) => {
 
 }
