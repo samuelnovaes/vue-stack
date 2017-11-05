@@ -1,5 +1,5 @@
 # vue-stack
-Nuxt, Vue.js, Vuetify, Express, NanoSQL, Node.js
+Nuxt, Vue.js, Vuetify, Express, NanoSQL, Node.js FullStack Boilerplate
 
 [![NPM](https://nodei.co/npm/vue-stack.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-stack/)
 

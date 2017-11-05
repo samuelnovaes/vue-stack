@@ -1,7 +1,7 @@
 {
 	"name": "vue-stack",
-	"version": "2.0.0",
-	"description": "Nuxt, Vue.js, Vuetify, Express, NanoSQL, Node.js",
+	"version": "2.0.1",
+	"description": "Nuxt, Vue.js, Vuetify, Express, NanoSQL, Node.js FullStack Boilerplate",
 	"author": "Samuel Novaes <samuel.novaes.96@gmail.com>",
 	"scripts": {
 		"dev": "node server.js",
@@ -41,7 +41,10 @@
 		"node",
 		"server",
 		"stack",
-		"mean"
+		"mean",
+		"fullstack",
+		"boilerplate",
+		"stack"
 	],
 	"repository": {
 		"type": "git",
