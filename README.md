@@ -5,10 +5,12 @@ Nuxt, Vue.js, Vuetify, Express, NanoSQL, Node.js FullStack Boilerplate
 
 ## Installation
 
-- Download vue-stack [here](https://github.com/samuelnovaes/vue-stack/releases)
-- Extract
-- Enter the directory
-- Run `npm install` to install dependencies
+```sh
+git clone https://github.com/samuelnovaes/vue-stack.git
+cd vue-stack
+npm install
+npm run dev
+```
 
 ## Express back end
 
