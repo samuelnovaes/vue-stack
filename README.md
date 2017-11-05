@@ -1,5 +1,5 @@
 # vue-stack
-Nuxt, Vue.js, Express, NanoSQL, Node.js
+Nuxt, Vue.js, Vuetify, Express, NanoSQL, Node.js
 
 [![NPM](https://nodei.co/npm/vue-stack.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-stack/)
 
@@ -26,9 +26,9 @@ pages/index.vue
 
 ```html
 <template>
-	<div id="page">
-		<button @click="sendMsg">Send message to server</button>
-	</div>
+	<v-container>
+		<v-btn @click="sendMsg">Send message to server</v-btn>
+	</v-container>
 </template>
 
 <script>
@@ -48,9 +48,9 @@ Or
 
 ```html
 <template>
-	<div id="page">
-		<button @click="sendMsg">Send message to server</button>
-	</div>
+	<v-container>
+		<v-btn @click="sendMsg">Send message to server</v-btn>
+	</v-container>
 </template>
 
 <script>
@@ -133,9 +133,10 @@ module.exports = (app) => {
 
 ## Documentation
 
-- [ExpressJS](http://expressjs.com/en/guide/routing.html)
-- [Nuxt.js](https://nuxtjs.org/guide/)
-- [Vue.js](http://vuejs.org/guide/)
+- [ExpressJS](http://expressjs.com)
+- [Nuxt.js](https://nuxtjs.org)
+- [Vue.js](http://vuejs.org)
+- [Vuetify](https://vuetifyjs.com)
 - [NanoSQL](https://github.com/ClickSimply/Nano-SQL)
-- [Node.js](https://nodejs.org/dist/latest-v8.x/docs/api)
+- [Node.js](https://nodejs.org)
 - [Axios](https://github.com/mzabriskie/axios)

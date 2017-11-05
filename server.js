@@ -4,13 +4,11 @@ const express = require('express')
 const path = require('path')
 const app = express()
 const server = require('http').Server(app)
-const chokidar = require('chokidar')
 const bodyParser = require('body-parser')
 const expressSession = require('express-session')
 const multipart = require('connect-multiparty')
 const LevelStore = require('level-session-store')(expressSession)
 const nSQLConfig = require('./nsql/index.js')
-const watcher = chokidar.watch('./server')
 const isProd = (process.env.NODE_ENV === 'production')
 const port = process.env.PORT || process.argv[2] || 8080
 const config = require('./nuxt.config.js')
@@ -33,17 +31,20 @@ app.use((req, res, next) => {
 })
 app.use(nuxt.render)
 
-watcher.on('ready', () => {
-	watcher.on('all', () => {
-		Object.keys(require.cache).forEach((id) => {
-			if (new RegExp(path.join(__dirname, 'server')).test(id)) {
-				delete require.cache[id]
-			}
+if (config.dev) {
+	const chokidar = require('chokidar')
+	const watcher = chokidar.watch('./server')
+
+	watcher.on('ready', () => {
+		watcher.on('all', () => {
+			Object.keys(require.cache).forEach((id) => {
+				if (new RegExp(path.join(__dirname, 'server')).test(id)) {
+					delete require.cache[id]
+				}
+			})
 		})
 	})
-})
 
-if (config.dev) {
 	new Builder(nuxt).build().then(() => {
 		serve()
 	}).catch((error) => {

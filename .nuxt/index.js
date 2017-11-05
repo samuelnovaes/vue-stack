@@ -131,16 +131,16 @@ async function createApp (ssrContext) {
   }
 
   
-  if (typeof plugin0 === 'function') await plugin0(ctx, inject)
-  
-
-  
   if (process.browser) {
-    // Replace store state before calling plugins
+    // Replace store state before plugins execution
     if (window.__NUXT__ && window.__NUXT__.state) {
       store.replaceState(window.__NUXT__.state)
     }
   }
+  
+
+  
+  if (typeof plugin0 === 'function') await plugin0(ctx, inject)
   
 
   if (process.server && ssrContext && ssrContext.url) {

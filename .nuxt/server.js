@@ -193,7 +193,7 @@ export default async context => {
 
   // If no Components found, returns 404
   if (!Components.length) {
-    context.nuxt.error = context.error({ statusCode: 404, message: 'This page could not be found.' })
+    context.nuxt.error = context.error({ statusCode: 404, message: 'This page could not be found' })
   }
 
   

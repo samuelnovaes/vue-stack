@@ -204,7 +204,7 @@ async function render (to, from, next) {
     await callMiddleware.call(this, Components, context, layout)
     if (context._redirected) return
 
-    this.error({ statusCode: 404, message: 'This page could not be found.' })
+    this.error({ statusCode: 404, message: 'This page could not be found' })
     return next()
   }
 
@@ -248,7 +248,7 @@ async function render (to, from, next) {
     })
     // ...If .validate() returned false
     if (!isValid) {
-      this.error({ statusCode: 404, message: 'This page could not be found.' })
+      this.error({ statusCode: 404, message: 'This page could not be found' })
       return next()
     }
 

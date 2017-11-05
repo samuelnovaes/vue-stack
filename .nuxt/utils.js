@@ -108,6 +108,9 @@ export function getContext (context, app) {
   if (ctx.isServer && context.beforeRenderFns) {
     ctx.beforeNuxtRender = (fn) => context.beforeRenderFns.push(fn)
   }
+  if (ctx.isClient && window.__NUXT__) {
+    ctx.serverState = window.__NUXT__
+  }
   return ctx
 }
 

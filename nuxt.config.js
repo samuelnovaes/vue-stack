@@ -10,7 +10,10 @@ module.exports = {
 		]
 	},
 	plugins: [
-		'~/plugins/axios.js'
+		'~/plugins/config.js'
+	],
+	css: [
+		'~/assets/style/app.styl'
 	],
 	loading: { color: '#FF0000' },
 	build: {
