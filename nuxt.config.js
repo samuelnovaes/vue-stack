@@ -6,6 +6,7 @@ module.exports = {
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
 		],
 		link: [
+			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
 			{ rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }
 		]
 	},
