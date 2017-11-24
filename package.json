@@ -3,6 +3,7 @@
 	"version": "2.0.4",
 	"description": "Nuxt, Vue.js, Vuetify, Express, NanoSQL, Node.js FullStack Boilerplate",
 	"author": "Samuel Novaes <samuel.novaes.96@gmail.com>",
+	"license": "BSD-3-Clause",
 	"scripts": {
 		"dev": "node server.js",
 		"build": "nuxt build",
