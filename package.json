@@ -10,20 +10,20 @@
 		"start": "cross-env NODE_ENV=production node server.js"
 	},
 	"dependencies": {
-		"axios": "^0.16.2",
+		"axios": "^0.18.0",
 		"body-parser": "^1.18.2",
 		"connect-multiparty": "^2.1.0",
-		"cross-env": "^3.2.4",
+		"cross-env": "^5.2.0",
 		"express": "^4.16.2",
 		"express-session": "^1.15.6",
-		"level": "^1.7.0",
+		"level": "^4.0.0",
 		"level-session-store": "^2.1.0",
-		"nano-sql": "^0.9.3",
+		"nano-sql": "^1.7.3",
 		"nuxt": "^1.0.0-rc9",
-		"vuetify": "^0.16.9"
+		"vuetify": "^1.1.8"
 	},
 	"devDependencies": {
-		"chokidar": "^1.7.0",
+		"chokidar": "^2.0.4",
 		"stylus": "^0.54.5",
 		"stylus-loader": "^3.0.1"
 	},
