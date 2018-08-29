@@ -1,5 +1,5 @@
 # vue-stack
-Nuxt, Vue.js, Vuetify, Express, NanoSQL, Node.js FullStack Boilerplate
+Nuxt, Vue.js, Vuetify, Axios, Express, Node.js FullStack Boilerplate
 
 ## Installation
 
