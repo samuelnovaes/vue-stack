@@ -1,5 +1,5 @@
 <template>
-	<v-template fluid>
-		<v-btn color="primary">Hello World</v-btn>
-	</v-template>
+	<v-container fluid>
+		<h1>Hello World!</h1>
+	</v-container>
 </template>

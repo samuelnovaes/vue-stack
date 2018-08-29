@@ -1,7 +1,9 @@
 export default {
-	state: () => ({
-
-	}),
+	state(){
+		return {
+			
+		}	
+	},
 	mutations: {
 
 	}

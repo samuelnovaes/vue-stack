@@ -1,59 +1,18 @@
 {
 	"name": "vue-stack",
-	"version": "2.0.4",
-	"description": "Nuxt, Vue.js, Vuetify, Express, NanoSQL, Node.js FullStack Boilerplate",
-	"author": "Samuel Novaes <samuel.novaes.96@gmail.com>",
-	"license": "BSD-3-Clause",
+	"version": "3.0.0",
 	"scripts": {
-		"dev": "node server.js",
+		"dev": "nodemon --watch server --exec nuxt",
 		"build": "nuxt build",
-		"start": "cross-env NODE_ENV=production node server.js"
+		"start": "nuxt start"
 	},
 	"dependencies": {
 		"axios": "^0.18.0",
-		"body-parser": "^1.18.2",
-		"connect-multiparty": "^2.1.0",
-		"cross-env": "^5.2.0",
-		"express": "^4.16.2",
-		"express-session": "^1.15.6",
-		"level": "^4.0.0",
-		"level-session-store": "^2.1.0",
-		"nano-sql": "^1.7.3",
-		"nuxt": "^1.0.0-rc9",
-		"vuetify": "^1.1.8"
+		"express": "^4.16.3",
+		"nuxt": "^1.4.2",
+		"vuetify": "^1.2.1"
 	},
 	"devDependencies": {
-		"chokidar": "^2.0.4",
-		"stylus": "^0.54.5",
-		"stylus-loader": "^3.0.1"
-	},
-	"keywords": [
-		"nuxt",
-		"vue",
-		"vuejs",
-		"vuetify",
-		"material",
-		"design",
-		"responsive",
-		"express",
-		"nano-sql",
-		"nanosql",
-		"database",
-		"nodejs",
-		"node",
-		"server",
-		"stack",
-		"mean",
-		"fullstack",
-		"storage",
-		"boilerplate"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/samuelnovaes/vue-stack.git"
-	},
-	"bugs": {
-		"url": "https://github.com/samuelnovaes/vue-stack/issues"
-	},
-	"homepage": "https://github.com/samuelnovaes/vue-stack#readme"
+		"nodemon": "^1.18.4"
+	}
 }
