@@ -1,6 +1,6 @@
 {
 	"name": "vue-stack",
-	"version": "3.0.0",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "nodemon --watch server --exec nuxt",
 		"build": "nuxt build",

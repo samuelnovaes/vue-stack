@@ -1,5 +1,7 @@
 # vue-stack
-Nuxt, Vue.js, Vuetify, Axios, Express, Node.js FullStack Boilerplate
+Minimalistic Boilerplate for FullStack Express and Vue.js applications.
+
+> To understand how this boilerplate works, see the [Nuxt.js documentation](https://nuxtjs.org).
 
 ## Installation
 
@@ -9,6 +11,8 @@ cd vue-stack
 npm install
 npm run dev
 ```
+
+> You can delete all `.gitkeep` files in your project
 
 ## Express back end
 
@@ -62,7 +66,7 @@ Use `this.$axios` to make HTTP requests
 | npm run build | Build application for production. |
 | npm start | Start server in production. |
 
-## Documentation
+## See more
 
 - [ExpressJS](http://expressjs.com)
 - [Nuxt.js](https://nuxtjs.org)

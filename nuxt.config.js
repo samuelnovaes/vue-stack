@@ -11,12 +11,12 @@ module.exports = {
 		]
 	},
 	mode: 'spa',
-	plugins: ['~/plugins/vue-stack.js'],
+	plugins: ['~/plugins/main.js'],
 	css: ['vuetify/dist/vuetify.min.css'],
 	loading: { color: '#FF0000' },
 	build: {
 		extractCSS: true,
-		vendor: ['axios', '~/plugins/vue-stack.js']
+		vendor: ['axios', '~/plugins/main.js']
 	},
 	serverMiddleware: [
 		{ path: '/api', handler: '~/server/index.js' }
