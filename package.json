@@ -2,17 +2,19 @@
 	"name": "vue-stack",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "nodemon --watch server --exec nuxt",
+		"dev": "cross-env NODE_ENV=development node index.js",
 		"build": "nuxt build",
-		"start": "nuxt start"
+		"start": "cross-env NODE_ENV=production node index.js",
+		"generate": "nuxt generate"
 	},
 	"dependencies": {
 		"axios": "^0.18.0",
+		"cross-env": "^5.2.0",
 		"express": "^4.16.3",
-		"nuxt": "^1.4.2",
-		"vuetify": "^1.2.3"
+		"nuxt": "^2.0.0",
+		"vuetify": "^1.2.4"
 	},
 	"devDependencies": {
-		"nodemon": "^1.18.4"
+		"chokidar": "^2.0.4"
 	}
 }

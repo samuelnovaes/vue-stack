@@ -14,7 +14,7 @@ npm run dev
 
 > You can delete all `.gitkeep` files in your project
 
-## Express back end
+## Express back end (With hot reload in dev mode!)
 
 There is a `server` directory with the Express API. Each route is mapped to `/api`.
 
@@ -23,15 +23,14 @@ There is a `server` directory with the Express API. Each route is mapped to `/ap
 server/index.js
 
 ```javascript
-const express = require('express')
-const app = express()
+const router = require('express').Router()
 
 // GET /api/greeting
-app.get('/greeting', (req, res) => {
+router.get('/greeting', (req, res) => {
 	console.log('Hello World!')
 })
 
-module.exports = app
+module.exports = router
 ```
 
 ## HTTP request example
@@ -60,11 +59,12 @@ Use `this.$axios` to make HTTP requests
 
 ## Commands
 
-| Command | Description |
-|---------|-------------|
-| npm run dev | Start server in development with Nuxt.js in dev mode (hot reloading). Listen on [http://localhost:3000](http://localhost:3000). |
-| npm run build | Build application for production. |
-| npm start | Start server in production. |
+Command | Description
+--- | ---
+npm run dev | Launch a development server on localhost:3000 with hot-reloading.
+npm run build | Build your application with webpack and minify the JS & CSS (for production).
+npm start | Start the server in production mode (after running nuxt build).
+npm run generate | Build the application and generate every route as a HTML file (used for static hosting).
 
 ## See more
 

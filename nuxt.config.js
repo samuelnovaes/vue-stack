@@ -1,4 +1,5 @@
 module.exports = {
+	mode: 'spa',
 	head: {
 		title: 'Vue Stack',
 		meta: [
@@ -10,15 +11,14 @@ module.exports = {
 			{ rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }
 		]
 	},
-	mode: 'spa',
-	plugins: ['~/plugins/main.js'],
-	css: ['vuetify/dist/vuetify.min.css'],
-	loading: { color: '#FF0000' },
-	build: {
-		extractCSS: true,
-		vendor: ['axios', '~/plugins/main.js']
-	},
-	serverMiddleware: [
-		{ path: '/api', handler: '~/server/index.js' }
-	]
+	plugins: [
+		'~/plugins/vuetify.js',
+		'~/plugins/axios.js'
+	],
+	css: [
+		'vuetify/dist/vuetify.min.css'
+	],
+	loading: {
+		color: '#FF0000'
+	}
 }
