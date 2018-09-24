@@ -9,6 +9,7 @@
 	},
 	"dependencies": {
 		"axios": "^0.18.0",
+		"compression": "^1.7.3",
 		"cross-env": "^5.2.0",
 		"express": "^4.16.3",
 		"nuxt": "^2.0.0",
