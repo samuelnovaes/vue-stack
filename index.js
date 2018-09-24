@@ -4,7 +4,6 @@ const path = require('path')
 const chokidar = require('chokidar')
 const compression = require('compression')
 const app = express()
-const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
 const config = require('./nuxt.config.js')
 config.dev = !(process.env.NODE_ENV === 'production')
@@ -29,8 +28,8 @@ async function start() {
 		await builder.build()
 	}
 	app.use(nuxt.render)
-	app.listen(port, host, () => {
-		console.log(`Server listening on http://${host}:${port}`)
+	app.listen(port, () => {
+		console.log(`Server listening on http://0.0.0.0:${port}`)
 	})
 }
 

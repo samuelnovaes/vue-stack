@@ -66,6 +66,13 @@ npm run build | Build your application with webpack and minify the JS & CSS (for
 npm start | Start the server in production mode (after running nuxt build).
 npm run generate | Build the application and generate every route as a HTML file (used for static hosting).
 
+# Using Docker
+
+```
+# docker build -t [IMAGE_NAME] .
+# docker run -d -p [PORT]:3000 [IMAGE_NAME]
+```
+
 ## See more
 
 - [ExpressJS](http://expressjs.com)
