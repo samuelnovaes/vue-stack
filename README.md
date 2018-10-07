@@ -12,8 +12,6 @@ npm install
 npm run dev
 ```
 
-> You can delete all `.gitkeep` files in your project
-
 ## Express back end (With hot reload in dev mode!)
 
 There is a `server` directory with the Express API. Each route is mapped to `/api`.
