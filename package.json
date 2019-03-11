@@ -11,11 +11,11 @@
 		"axios": "^0.18.0",
 		"compression": "^1.7.3",
 		"cross-env": "^5.2.0",
-		"express": "^4.16.3",
-		"nuxt": "^2.1.0",
-		"vuetify": "^1.2.6"
+		"express": "^4.16.4",
+		"nuxt": "^2.4.5",
+		"vuetify": "^1.5.5"
 	},
 	"devDependencies": {
-		"chokidar": "^2.0.4"
+		"chokidar": "^2.1.2"
 	}
 }

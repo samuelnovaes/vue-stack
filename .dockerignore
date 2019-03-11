@@ -1,5 +1,6 @@
 
-# Created by https://www.gitignore.io/api/node
+# Created by https://www.gitignore.io/api/node,nuxt
+# Edit at https://www.gitignore.io/?templates=node,nuxt
 
 ### Node ###
 # Logs
@@ -24,7 +25,7 @@ coverage
 # nyc test coverage
 .nyc_output
 
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
 # Bower dependency directory (https://bower.io/)
@@ -60,6 +61,7 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.test
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -69,17 +71,32 @@ typings/
 
 # nuxt.js build output
 .nuxt
-dist
 
 # vuepress build output
 .vuepress/dist
 
 # Serverless directories
-.serverless
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+### Nuxt ###
+# gitignore template for Nuxt.js projects
+#
+# Recommended template: Node.gitignore
+
+# Nuxt build
+
+ # Nuxt generate
+dist
 
 # Git files
 .git
 .gitignore
 README.md
 
-# End of https://www.gitignore.io/api/node
+# End of https://www.gitignore.io/api/node,nuxt
