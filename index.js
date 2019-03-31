@@ -25,10 +25,11 @@ async function start() {
 		})
 		await new Builder(nuxt).build()
 	}
-	await init()
 	await nuxt.ready()
-	app.listen(port, () => {
-		console.log(`Server listening on port ${port}`)
+	init(() => {
+		app.listen(port, () => {
+			console.log(`Server listening on port ${port}`)
+		})
 	})
 }
 

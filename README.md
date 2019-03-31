@@ -53,8 +53,9 @@ npm run generate | Build the application and generate every route as a HTML file
 If you need to run something before Express listen, use the `init.js` file
 
 ```javascript
-module.exports = async function () {
+module.exports = function (next) {
 	//Run something before Express listen
+	next()
 }
 ```
 
