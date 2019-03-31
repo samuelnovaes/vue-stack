@@ -21,14 +21,15 @@ There is a `server` directory with the Express API. Each route is mapped to `/ap
 server/index.js
 
 ```javascript
-const router = require('express').Router()
+const express = require('express')
+const app = express()
 
 // GET /api/greeting
-router.get('/greeting', (req, res) => {
+app.get('/greeting', (req, res) => {
 	console.log('Hello World!')
 })
 
-module.exports = router
+module.exports = app
 ```
 
 ## Commands

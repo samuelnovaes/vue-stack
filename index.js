@@ -1,7 +1,6 @@
 const express = require('express')
 const { Nuxt, Builder } = require('nuxt')
 const path = require('path')
-const compression = require('compression')
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -9,7 +8,6 @@ const config = require('./nuxt.config.js')
 config.dev = !(process.env.NODE_ENV === 'production')
 const nuxt = new Nuxt(config)
 
-app.use(compression())
 app.use('/api', (req, res, next) => { require('./server/index.js')(req, res, next) })
 app.use(nuxt.render)
 
