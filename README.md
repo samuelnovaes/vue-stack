@@ -31,30 +31,6 @@ router.get('/greeting', (req, res) => {
 module.exports = router
 ```
 
-## HTTP request example
-
-Use `this.$axios` to make HTTP requests
-
-```html
-<template>
-	<v-container>
-		<v-btn @click="sendMsg">Send message to server</v-btn>
-	</v-container>
-</template>
-
-<script>
-	export default {
-		methods: {
-			sendMsg(){
-				this.$axios.post('/api/messages', {message: 'Hello World!'}).then((response)=>{
-					console.log('Message sent')
-				})
-			}
-		}
-	}
-</script>
-```
-
 ## Commands
 
 Command | Description
@@ -73,9 +49,7 @@ npm run generate | Build the application and generate every route as a HTML file
 
 ## See more
 
-- [ExpressJS](http://expressjs.com)
-- [Nuxt.js](https://nuxtjs.org)
-- [Vue.js](http://vuejs.org)
-- [Vuetify](https://vuetifyjs.com)
 - [Node.js](https://nodejs.org)
-- [Axios](https://github.com/mzabriskie/axios)
+- [ExpressJS](http://expressjs.com)
+- [Vue.js](http://vuejs.org)
+- [Nuxt.js](https://nuxtjs.org)

@@ -1,5 +1,5 @@
 <template>
-	<v-container>
+	<div>
 		<h1>Hello World!</h1>
-	</v-container>
+	</div>
 </template>

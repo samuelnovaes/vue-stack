@@ -1,21 +1,21 @@
 const express = require('express')
 const { Nuxt, Builder } = require('nuxt')
 const path = require('path')
-const chokidar = require('chokidar')
 const compression = require('compression')
 const app = express()
 const port = process.env.PORT || 3000
+
 const config = require('./nuxt.config.js')
 config.dev = !(process.env.NODE_ENV === 'production')
-app.use(compression())
+const nuxt = new Nuxt(config)
 
-app.use('/api', (req, res, next) => {
-	require('./server/index.js')(req, res, next)
-})
+app.use(compression())
+app.use('/api', (req, res, next) => { require('./server/index.js')(req, res, next) })
+app.use(nuxt.render)
 
 async function start() {
-	const nuxt = new Nuxt(config)
 	if (config.dev) {
+		const chokidar = require('chokidar')
 		const watcher = chokidar.watch(path.join(__dirname, 'server'))
 		watcher.on('all', () => {
 			Object.keys(require.cache).forEach(id => {
@@ -24,12 +24,11 @@ async function start() {
 				}
 			})
 		})
-		const builder = new Builder(nuxt)
-		await builder.build()
+		await new Builder(nuxt).build()
 	}
-	app.use(nuxt.render)
+	await nuxt.ready()
 	app.listen(port, () => {
-		console.log(`Server listening on http://0.0.0.0:${port}`)
+		console.log(`Server listening on port ${port}`)
 	})
 }
 
