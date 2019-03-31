@@ -1,6 +1,7 @@
 const express = require('express')
 const { Nuxt, Builder } = require('nuxt')
 const path = require('path')
+const init = require('./init')
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -24,6 +25,7 @@ async function start() {
 		})
 		await new Builder(nuxt).build()
 	}
+	await init()
 	await nuxt.ready()
 	app.listen(port, () => {
 		console.log(`Server listening on port ${port}`)

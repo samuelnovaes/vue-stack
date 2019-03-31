@@ -48,6 +48,16 @@ npm run generate | Build the application and generate every route as a HTML file
 # docker run -d --name [CONTAINER_NAME] -p [PORT]:3000 [IMAGE_NAME]
 ```
 
+# The `init.js` file
+
+If you need to run something before Express listen, use the `init.js` file
+
+```javascript
+module.exports = async function () {
+	//Run something before Express listen
+}
+```
+
 ## See more
 
 - [Node.js](https://nodejs.org)
