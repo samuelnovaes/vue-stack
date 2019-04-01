@@ -18,7 +18,6 @@ async function start() {
 		watcher.on('all', () => {
 			Object.keys(require.cache).forEach(id => {
 				if (id.startsWith(`${path.join(__dirname, 'server')}${path.sep}`)) {
-					console.log(id)
 					delete require.cache[id]
 				}
 			})
