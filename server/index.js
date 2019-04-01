@@ -1,6 +1,5 @@
-const express = require('express')
-const app = express()
+const router = require('express').Router()
 
 //Express API here
 
-module.exports = app
+module.exports = router
