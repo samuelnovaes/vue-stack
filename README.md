@@ -1,5 +1,5 @@
 # vue-stack
-Minimalistic Boilerplate for FullStack Express and Vue.js applications.
+Minimalistic Boilerplate for FullStack Express and Vue.js applications with PWA support.
 
 > To understand how this boilerplate works, see the [Nuxt.js documentation](https://nuxtjs.org).
 
@@ -12,7 +12,7 @@ npm install
 npm run dev
 ```
 
-## Express back end (With hot reload in dev mode!)
+## Express API (With hot reload in dev mode!)
 
 There is a `server` directory with the Express API. Each route is mapped to `/api`.
 
@@ -30,6 +30,22 @@ router.get('/greeting', (req, res) => {
 
 module.exports = router
 ```
+
+## Index.js file
+
+The index.js file is responsible for starting the Express application. The `vueStack(app, port)` function starts the application on a specific port.
+
+```javascript
+const express = require('express')
+const vueStack = require('./vue-stack')
+const app = express()
+
+vueStack(app, 3000)
+```
+
+## PWA
+
+By default, Vue Stack generates a PWA application en production mode. You can customize its manifest and icons in nuxt.config.js
 
 ## Commands
 
@@ -53,3 +69,4 @@ npm run generate | Build the application and generate every route as a HTML file
 - [ExpressJS](http://expressjs.com)
 - [Vue.js](http://vuejs.org)
 - [Nuxt.js](https://nuxtjs.org)
+- [Nuxt PWA](https://pwa.nuxtjs.org)

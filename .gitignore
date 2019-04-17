@@ -98,4 +98,7 @@ typings/
  # Nuxt generate
 dist
 
+# Nuxt PWA
+sw.*
+
 # End of https://www.gitignore.io/api/node,nuxt

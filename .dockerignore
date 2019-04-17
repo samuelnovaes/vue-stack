@@ -98,6 +98,9 @@ typings/
  # Nuxt generate
 dist
 
+# Nuxt PWA
+sw.*
+
 # Git files
 .git
 .gitignore
