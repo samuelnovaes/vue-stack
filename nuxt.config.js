@@ -25,9 +25,10 @@ module.exports = {
 		theme_color: "#1976D2",
 		background_color: "#1976D2",
 		display: "standalone",
-		orientation: "portrait",
+		orientation: "any",
 		scope: "/",
-		start_url: "/"
+		start_url: "/",
+		description: "Minimalistic Boilerplate for FullStack Express and Vue.js applications with PWA support."
 	},
 	icon: {
 		iconSrc: 'static/img/icon.png'

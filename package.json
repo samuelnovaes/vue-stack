@@ -1,8 +1,6 @@
 {
 	"name": "vue-stack",
 	"version": "1.0.0",
-	"description": "Minimalistic Boilerplate for FullStack Express and Vue.js applications with PWA support.",
-	"author": "Samuel Novaes Sena <samuel.novaes.96@gmail.com> (https://samuelnovaes.github.io)",
 	"scripts": {
 		"dev": "node index.js",
 		"build": "nuxt build",
@@ -17,6 +15,5 @@
 	},
 	"devDependencies": {
 		"chokidar": "^2.1.5"
-	},
-	"license": "BSD-2-Clause"
+	}
 }
