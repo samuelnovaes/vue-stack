@@ -19,7 +19,7 @@ const refreshAPI = () => {
 module.exports = async function (app, port) {
 	app.use(express.json())
 	app.use(express.urlencoded({ extended: false }))
-	app.use('/api', (req, res, next) => { require('./api/index.js.js')(req, res, next) })
+	app.use('/api', (req, res, next) => { require('./api/index.js')(req, res, next) })
 	app.use(nuxt.render)
 
 	if (config.dev) {
