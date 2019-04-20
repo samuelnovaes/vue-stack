@@ -14,11 +14,12 @@ npm run dev
 
 ## Express API (With hot reload in dev mode!)
 
-There is a `server` directory with the Express API. Each route is mapped to `/api`.
+There is a `api` directory with the Express API. Each route is mapped to `/api`.
+> `BodyParser` is included by default.
 
 ### Example
 
-server/index.js
+api/index.js
 
 ```javascript
 const router = require('express').Router()
@@ -42,6 +43,8 @@ const app = express()
 
 vueStack(app, 3000)
 ```
+
+The `vueStack` function returns a Promise.
 
 ## PWA
 

@@ -3,24 +3,30 @@
 const { Nuxt, Builder } = require('nuxt')
 const path = require('path')
 const config = require('./nuxt.config.js')
+const express = require('express')
 
 config.dev = !(process.env.NODE_ENV === 'production')
 const nuxt = new Nuxt(config)
 
-module.exports = async function(app, port) {
-	app.use('/api', (req, res, next) => { require('./server/index.js')(req, res, next) })
+const refreshAPI = () => {
+	Object.keys(require.cache).forEach(id => {
+		if (id.startsWith(`${path.join(__dirname, 'api')}${path.sep}`)) {
+			delete require.cache[id]
+		}
+	})
+}
+
+module.exports = async function (app, port) {
+	app.use(express.json())
+	app.use(express.urlencoded({ extended: false }))
+	app.use('/api', (req, res, next) => { require('./api/index.js.js')(req, res, next) })
 	app.use(nuxt.render)
 
 	if (config.dev) {
 		const chokidar = require('chokidar')
-		const watcher = chokidar.watch(path.join(__dirname, 'server'))
-		watcher.on('all', () => {
-			Object.keys(require.cache).forEach(id => {
-				if (id.startsWith(`${path.join(__dirname, 'server')}${path.sep}`)) {
-					delete require.cache[id]
-				}
-			})
-		})
+		const watcher = chokidar.watch(path.join(__dirname, 'api'))
+		watcher.on('add', refreshAPI)
+		watcher.on('change', refreshAPI)
 		await new Builder(nuxt).build()
 	}
 
