@@ -41,7 +41,7 @@ const express = require('express')
 const vueStack = require('./vue-stack')
 const app = express()
 
-vueStack(app, 3000)
+vueStack(app, process.env.PORT || 3000)
 ```
 
 The `vueStack` function returns a Promise.
